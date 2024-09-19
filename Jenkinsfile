@@ -1,5 +1,7 @@
 pipeline { 
             agent any
+            parameters { string defaultValue: 'develop', description: 'This is branch name for repository', name: 'branch_name' }
+
             stages{
                 stage("checkout code") {
                     steps{
